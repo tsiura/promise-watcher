@@ -1,8 +1,12 @@
-# promise-watcher
-A PHP library for asynchronous, promise-based object watching.
+<?php
 
-### basic usage example
-```
+require_once dirname(dirname(__FILE__)) . '/vendor/autoload.php';
+
+
+use React\EventLoop\Loop;
+use Tsiura\PromiseWatcher\EvaluatedObjectInterface;
+use Tsiura\PromiseWatcher\ObjectWatcher;
+
 class EvalObjNum implements EvaluatedObjectInterface
 {
     public function __construct(
@@ -30,8 +34,3 @@ $w1->start()
     }, function (\Throwable $e) { echo $e->getMessage() . PHP_EOL; });
 
 $watcher->evaluate(11);
-```
-#### this example with print `Timed out watching 0:(10)`
-#### in case we evaluate with number 10 output will be `Evaluated successfully with value 10`
-
-### For evaluating more complex object may be used `webmozart/expression`
