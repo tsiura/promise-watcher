@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 require_once dirname(dirname(__FILE__)) . '/vendor/autoload.php';
 
 
@@ -27,10 +29,11 @@ class EvalObjNum implements EvaluatedObjectInterface
 
 $watcher = new ObjectWatcher(Loop::get());
 
-$w1 = $watcher->createWatching(new EvalObjNum(10), 1);
+$w1 = $watcher->createWatching(new EvalObjNum(11), 1);
 $w1->start()
     ->then(function ($value) {
         echo sprintf('Evaluated successfully with value ' . $value) . PHP_EOL;
     }, function (\Throwable $e) { echo $e->getMessage() . PHP_EOL; });
 
 $watcher->evaluate(11);
+
