@@ -12,7 +12,7 @@ use Tsiura\PromiseWatcher\Exception\WatchingTimeoutException;
 
 class ObjectWatcher
 {
-    public const DEFAULT_TIMEOUT = 5;
+    public const int DEFAULT_TIMEOUT = 5;
 
     /**
      * @var WatcherTask[]
@@ -76,7 +76,7 @@ class ObjectWatcher
     private function startWatching(Deferred $deferred, string $id, ?float $timeout = 0): Promise
     {
         $task = $this->getTask($id);
-        if (null !== $task && $timeout) {
+        if (null !== $task && null !== $timeout && $timeout > 0) {
             // Case when task not resolved yet, should add overdue timer
             $task->timer = $this->loop->addTimer($timeout, fn () => $this->taskTimeout($id));
         }
