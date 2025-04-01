@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Tsiura\PromiseWatcher\Exception;
+namespace Zeran\PromiseWatcher\Exception;
 
-use Tsiura\PromiseWatcher\WatcherTask;
+use Zeran\PromiseWatcher\WatcherTask;
 
 class WatchingTimeoutException extends PromiseWatcherException
 {

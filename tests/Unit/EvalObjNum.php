@@ -2,7 +2,7 @@
 
 namespace Tests\Unit;
 
-use Tsiura\PromiseWatcher\EvaluatedObjectInterface;
+use Zeran\PromiseWatcher\EvaluatedObjectInterface;
 
 class EvalObjNum implements EvaluatedObjectInterface
 {
