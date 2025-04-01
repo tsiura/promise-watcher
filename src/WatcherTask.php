@@ -6,14 +6,14 @@ namespace Zeran\PromiseWatcher;
 
 use React\Promise\Deferred;
 
-class WatcherTask
+readonly class WatcherTask
 {
     public function __construct(
-        public readonly string $id,
-        public readonly EvaluatedObjectInterface $expression,
-        public readonly Deferred $deferred,
-        public readonly Watching $watching,
-        public readonly ?float $timeout = null,
+        public string $id,
+        public EvaluatedObjectInterface $expression,
+        public Deferred $deferred,
+        public Watching $watching,
+        public ?float $timeout = null,
     ) {
     }
 }
