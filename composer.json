@@ -1,6 +1,6 @@
 {
-    "name": "tsiura/promise-watcher",
-    "description": "A PHP library for asynchronous, promise-based object watching",
+    "name": "zeran/promise-watcher",
+    "description": "A PHP library for asynchronous, promise-based object evaluation",
     "license": "GPL-3.0-or-later",
     "authors": [
         {
@@ -11,8 +11,7 @@
     "require": {
         "php": ">=8.3",
         "react/promise": "^3.2",
-        "psr/log": "^3.0",
-        "react/event-loop": "^1.5"
+        "psr/log": "^3.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^10.5",
@@ -22,7 +21,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Tsiura\\PromiseWatcher\\": "src/"
+            "Zeran\\PromiseWatcher\\": "src/"
         }
     },
     "autoload-dev": {

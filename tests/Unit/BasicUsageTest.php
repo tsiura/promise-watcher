@@ -3,14 +3,13 @@
 namespace Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
-use React\EventLoop\Loop;
-use Tsiura\PromiseWatcher\ObjectWatcher;
+use Zeran\PromiseWatcher\ObjectWatcher;
 
 class BasicUsageTest extends TestCase
 {
     public function testResolveSuccess()
     {
-        $watcher = new ObjectWatcher(Loop::get());
+        $watcher = new ObjectWatcher();
 
         $result = 0;
 

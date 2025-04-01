@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tsiura\PromiseWatcher\Exception;
+namespace Zeran\PromiseWatcher\Exception;
 
 use Exception;
 

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tsiura\PromiseWatcher;
+namespace Zeran\PromiseWatcher;
 
 use Stringable;
 
